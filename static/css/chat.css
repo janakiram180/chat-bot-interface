@@ -1,0 +1,216 @@
+.chat-bar-collapsible {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    bottom: 0;
+    right: 10px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.collapsible {
+    text-align: center;
+    outline: none;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 3px solid white;
+    border-bottom: none;
+    height: 3rem;   
+    margin: 50px 50px;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 18px;
+
+}
+
+#heading1{
+  margin: 10px  100px;
+}
+.content {
+    max-width: 0;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: max-width 0.9s ease-out;
+    background-color: #f1f1f1;
+    z-index: -1;
+}
+
+.full-chat-block {
+    /* width: 50vh; */
+    /* height: 60vh; */
+    background: white;
+    text-align: center;
+    overflow: auto;
+    scrollbar-width: none;
+    height: max-content;
+    border-radius: 0px 0px 0px 0px;
+    transition: max-height 0.2s ease-out;
+}
+
+.outer-container {
+    height: 79vh;
+    /* max-height: 1000px; */
+    /* margin: 50px 0px; */
+    bottom: 0%;
+    border-radius: 25px;
+    position: relative;
+}
+
+
+.header{
+    position: relative;
+    justify-content: center;
+    border-radius: 0px 25px  0px 0px;
+    padding : 10px;
+    min-height  : 10vh;
+    /* width: ;   */
+    z-index: 1;
+    background-color: antiquewhite;
+}
+
+#close-button{
+    outline: none;
+    border-radius: 10px ;
+    border: 1px solid antiquewhite;
+    padding: 3px;
+    width: 7%;
+    
+    background-color: antiquewhite;
+    border-bottom: none;
+    margin: 0px 10px;
+}
+
+.chat-container {
+    max-height: 100%;
+    /* max-height: 500px; */
+    width: 100%;
+    position:absolute;
+    bottom: -0px;
+    left: 0;
+    scroll-behavior: smooth;
+    hyphens: auto;
+}
+
+.chat-container::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-bar-input-block {
+    display: flex;
+    float: left;
+    box-sizing: border-box;
+    justify-content: space-between;
+    min-height: 10vh;
+    width: 100%;
+    border-radius: 25px;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px 0px 10px 10px;
+}
+
+.chat-bar-icons {
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    width: 25%;
+    float: right;
+    font-size: 20px;
+}
+
+#chat-icon:hover {
+    opacity: .7;
+}
+
+/* Chat bubbles */
+
+#userInput {
+    width: 75%;
+}
+
+.input-box {
+    float: left;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #000;
+    background-color: white;
+    outline: none
+}
+
+
+.userText {
+    color: white;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: right;
+    clear: both;
+}
+
+.userText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #5ca6fa;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-right-radius: 2px;
+    max-width: 80%;
+    margin-right: 10px;
+    animation: floatup .5s forwards;
+}
+
+.botText {
+    color: #000;
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: left;
+}
+
+.botText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom-left-radius: 2px;
+    max-width: 80%;
+    margin-left: 10px;
+    animation: floatup .5s forwards
+}
+
+@keyframes floatup {
+    from {
+        transform: translateY(14px);
+        opacity: .0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .full-chat-block {
+        width: 100%;
+        border-radius: 0px;
+    }
+    .chat-bar-collapsible {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+    }
+    .collapsible {
+        width: 100%;
+        border: 0px;
+        border-top: 3px solid white;
+        border-radius: 0px;
+    }
+}
